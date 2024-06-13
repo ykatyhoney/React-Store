@@ -58,7 +58,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "babel-jest": "24.9.0",
+    "babel-jest": "29.7.0",
     "bfj": "^7.0.1",
     "chalk": "^2.4.1",
     "enzyme": "^3.9.0",
