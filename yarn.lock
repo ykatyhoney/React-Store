@@ -1783,14 +1783,43 @@
   version "1.2.0"
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz"
 
-"@sentry/browser@5.7.1":
-  version "5.7.1"
-  resolved "https://registry.npmjs.org/@sentry/browser/-/browser-5.7.1.tgz"
+"@sentry-internal/feedback@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry-internal/feedback/-/feedback-7.119.1.tgz#98285dc9dba0ab62369d758124901b00faf58697"
   dependencies:
-    "@sentry/core" "5.7.1"
-    "@sentry/types" "5.7.1"
-    "@sentry/utils" "5.7.1"
-    tslib "^1.9.3"
+    "@sentry/core" "7.119.1"
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
+
+"@sentry-internal/replay-canvas@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry-internal/replay-canvas/-/replay-canvas-7.119.1.tgz#b1413fb37734d609b0745ac24d49ddf9d63b9c51"
+  dependencies:
+    "@sentry/core" "7.119.1"
+    "@sentry/replay" "7.119.1"
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
+
+"@sentry-internal/tracing@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry-internal/tracing/-/tracing-7.119.1.tgz#500d50d451bfd0ce6b185e9f112208229739ab03"
+  dependencies:
+    "@sentry/core" "7.119.1"
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
+
+"@sentry/browser@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-7.119.1.tgz#260470dd7fd18de366017c3bf23a252a24d2ff05"
+  dependencies:
+    "@sentry-internal/feedback" "7.119.1"
+    "@sentry-internal/replay-canvas" "7.119.1"
+    "@sentry-internal/tracing" "7.119.1"
+    "@sentry/core" "7.119.1"
+    "@sentry/integrations" "7.119.1"
+    "@sentry/replay" "7.119.1"
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
 
 "@sentry/core@5.7.1":
   version "5.7.1"
@@ -1802,6 +1831,13 @@
     "@sentry/utils" "5.7.1"
     tslib "^1.9.3"
 
+"@sentry/core@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-7.119.1.tgz#63e949cad167a0ee5e52986c93b96ff1d6a05b57"
+  dependencies:
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
+
 "@sentry/hub@5.7.1":
   version "5.7.1"
   resolved "https://registry.npmjs.org/@sentry/hub/-/hub-5.7.1.tgz"
@@ -1809,6 +1845,15 @@
     "@sentry/types" "5.7.1"
     "@sentry/utils" "5.7.1"
     tslib "^1.9.3"
+
+"@sentry/integrations@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry/integrations/-/integrations-7.119.1.tgz#9fc17aa9fcb942fbd2fc12eecd77a0f316897960"
+  dependencies:
+    "@sentry/core" "7.119.1"
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
+    localforage "^1.8.1"
 
 "@sentry/minimal@5.7.1":
   version "5.7.1"
@@ -1831,9 +1876,22 @@
     lru_map "^0.3.3"
     tslib "^1.9.3"
 
+"@sentry/replay@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry/replay/-/replay-7.119.1.tgz#117cf493a3008a39943b7d571d451c6218542847"
+  dependencies:
+    "@sentry-internal/tracing" "7.119.1"
+    "@sentry/core" "7.119.1"
+    "@sentry/types" "7.119.1"
+    "@sentry/utils" "7.119.1"
+
 "@sentry/types@5.7.1":
   version "5.7.1"
   resolved "https://registry.npmjs.org/@sentry/types/-/types-5.7.1.tgz"
+
+"@sentry/types@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-7.119.1.tgz#f9c3c12e217c9078a6d556c92590e42a39b750dd"
 
 "@sentry/utils@5.7.1":
   version "5.7.1"
@@ -1841,6 +1899,12 @@
   dependencies:
     "@sentry/types" "5.7.1"
     tslib "^1.9.3"
+
+"@sentry/utils@7.119.1":
+  version "7.119.1"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-7.119.1.tgz#08b28fa8170987a60e149e2102e83395a95e9a89"
+  dependencies:
+    "@sentry/types" "7.119.1"
 
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
@@ -5191,6 +5255,10 @@ ignore@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
 
+immediate@~3.0.5:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
+
 immer@^9.0.7:
   version "9.0.16"
   resolved "https://registry.npmjs.org/immer/-/immer-9.0.16.tgz"
@@ -6202,6 +6270,12 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lie@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lie/-/lie-3.1.1.tgz#9a436b2cc7746ca59de7a41fa469b3efb76bd87e"
+  dependencies:
+    immediate "~3.0.5"
+
 lilconfig@^2.0.3, lilconfig@^2.0.5, lilconfig@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.6.tgz"
@@ -6225,6 +6299,12 @@ loader-utils@^2.0.0:
 loader-utils@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/loader-utils/-/loader-utils-3.2.0.tgz"
+
+localforage@^1.8.1:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.10.0.tgz#5c465dc5f62b2807c3a84c0c6a1b1b3212781dd4"
+  dependencies:
+    lie "3.1.1"
 
 locate-path@^3.0.0:
   version "3.0.0"
